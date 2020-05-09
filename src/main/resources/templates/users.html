@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+
+    <title>Users</title>
+</head>
+<body>
+
+<main>
+</main>
+<header>
+    <div class="container">
+        <div id="slogan">
+            <h1>
+                Crowd Source
+                <span class="txt-type" data-wait="3000" data-words='["Beta Testing", "Professionalism", "Efficiency"]'></span>
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="current"><a href="index.html" th:href="@{/}"> Home</a> </li>
+                <li><a href="about.html" th:href="@{/about}"> About Us</a> </li>
+                <li><a href="profile.html" th:href="@{/profile}"> Profile</a> </li>
+                <li><a href="register.html" th:href="@{/register}"> Sign Up</a> </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<header class="banner">
+    <h1>User list</h1>
+</header>
+
+
+<section class="central">
+    <p>There are <span th:text="${users.size()}">#0</span>Users on the site: </p>
+
+
+    <table>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.phoneNumber}"></td>
+            <td th:text="${user.email}"></td>
+        </tr>
+    </table>
+
+</section>
+
+<footer>
+
+
+    <a href="index.html" th:href="@{/}"> Home</a>
+    <a href="about.html" th:href="@{/about}">Contact Us</a>
+    <a href="profile.html" th:href="@{/profile}">Profile</a>
+
+</footer>
+
+</body>
+<script src="../static/js/main.js" type="text/javascript" th:src="@{/js/main.js}"></script>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <title>Crowd Source Beta Testing | Home</title>
+</head>
+<body>
+<main>
+</main>
+<header>
+    <div class="container">
+        <div id="slogan">
+            <h1>
+                Crowd Source
+                <span class="txt-type" data-wait="3000" data-words='["Beta Testing", "Professionalism", "Efficiency"]'></span>
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" th:href="@{/}"> Home</a> </li>
+                <li><a href="about.html" th:href="@{/about}"> About Us</a> </li>
+                <li><a href="profile.html" th:href="@{/profile}"> Profile</a> </li>
+                <li><a href="register.html" th:href="@{/register}"> Sign Up</a> </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <h1>Profile</h1>
+    <section id="profile">
+    <section class="container">
+        <div class="box">
+        <dl>
+            <dt class="name">Name:</dt>
+            <dd th:text="${collatedUser.getUser().name}"></dd>
+            <dt class="number">Phone Number:</dt>
+            <dd th:text="${collatedUser.getUser().phoneNumber}"></dd>
+            <dt class="email">Email:</dt>
+            <dd th:text="${collatedUser.getUser().email}"></dd>
+            <dt class="tester">Tester:</dt>
+            <dd th:text="${collatedUser.getUser().test}"></dd>
+        </dl>
+        </div>
+    </section>
+    </section>
+</main>
+
+
+
+
+
+
+<footer>
+
+
+    <a href="index.html" th:href="@{/}"> Home</a>
+    <a href="about.html" th:href="@{/about}">Contact Us</a>
+    <a href="profile.html" th:href="@{/profile}">Profile</a>
+    <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+</footer>
+</body>
+</html>
